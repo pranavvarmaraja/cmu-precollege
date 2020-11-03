@@ -1,0 +1,2 @@
+Winter_Alleghany_2	Winter_Alleghany_3	Winter_Braddock_1	Winter_Braddock_2	Winter_Braddock_3	Winter_Control_2	Winter_Monongahela_1	Winter_Monongahela_2	Winter_Monongahela_3	Winter_Neville_1	Winter_Neville_2	Winter_Neville_3	Winter_Sharpsburg_1	Winter_Sharpsburg_2	Winter_Sharpsburg_3	
+52	56	31	37	55	63	62	45	43	68	48	46	53	61	72	

@@ -1,0 +1,2 @@
+Fall_Alleghany_1	Fall_Alleghany_2	Fall_Alleghany_3	Fall_Braddock_1	Fall_Braddock_2	Fall_Braddock_3	Fall_Control_1	Fall_Control_2	Fall_Control_3	Fall_Monongahela_1	Fall_Monongahela_2	Fall_Monongahela_3	Fall_Neville_1	Fall_Neville_2	Fall_Neville_3	Fall_Sharpsburg_1	Fall_Sharpsburg_2	Fall_Sharpsburg_3	Fall_Sharpsburg_4	
+75	75	65	79	87	97	136	114	104	83	85	72	80	74	71	54	104	78	86	

@@ -1,0 +1,2 @@
+Summer_Alleghany_1	Summer_Braddock_1	Summer_Braddock_2	Summer_Monongahela_1	Summer_Neville_1	Summer_Neville_2	Summer_Sharpsburg_1	Summer_Sharpsburg_2	
+0.041	0.036	0.035	0.039	0.036	0.067	0.042	0.038	

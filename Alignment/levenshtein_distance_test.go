@@ -1,0 +1,40 @@
+package Alignment
+
+import (
+	"strconv"
+	"testing"
+)
+
+type levenshteinDistanceTestpair struct {
+	str1    string
+	str2    string
+	levDist int
+}
+
+var levenshteinDistanceTests = []levenshteinDistanceTestpair{
+	{"A--T",
+		"A--T", 0},
+	{"ATGCGGCTAGCTTAGCCTAGATCGATCGGCTAGCTAGCTAGCCGAGGCTCTCGATCGATCGCGCTAGG",
+		"ATGCGGCTGGCTTAGCCTAGTTCGATCGCGTTCGTAGCTATAGAGCTAGCTAGATCGATCGCGCTAGG", 13},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"GGTACATCGATTCTAGATTCTATAGCGCGCTTCGATCGATTCGATCGATCGAAAAG", 29},
+	{"TTGCGGAGCTAGGGA---TCCGATCGAATATCGATAT---TCGATCGGGAACAC---AGATCGAT",
+		"TTGCG-GAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAA---CACAGATCGAT", 13},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"TTGCGGAGCTAGGGATCCGATCGAATATCGATATAGCATCGGGAACACAGATCGAT", 3},
+	{"TTGCGGAG-CTAGGGATCCGATCGAATA---TCGATATTCGATCGGGAACACAGATCGAT",
+		"TT--GCGGAGCTAGGGATCCGATCGAATATCGATATAGCAT----CGGGAAC--ACAGATCGAT", 15}}
+
+func TestEditDistance(t *testing.T) {
+	for _, pair := range levenshteinDistanceTests {
+		v := EditDistance(pair.str1, pair.str2)
+		if v != pair.levDist {
+			t.Error(
+				"For", pair.str1,
+				"and", pair.str2,
+				"expected", strconv.Itoa(pair.levDist),
+				"got", strconv.Itoa(v),
+			)
+		}
+	}
+}

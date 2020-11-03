@@ -1,0 +1,2 @@
+Summer_Alleghany_1	Summer_Braddock_1	Summer_Braddock_2	Summer_Monongahela_1	Summer_Neville_1	Summer_Neville_2	Summer_Sharpsburg_1	Summer_Sharpsburg_2	
+70	79	61	78	75	88	83	78	

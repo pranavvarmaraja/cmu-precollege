@@ -1,0 +1,2 @@
+Fall_Alleghany_1	Fall_Alleghany_2	Fall_Alleghany_3	Fall_Braddock_1	Fall_Braddock_2	Fall_Braddock_3	Fall_Control_1	Fall_Control_2	Fall_Control_3	Fall_Monongahela_1	Fall_Monongahela_2	Fall_Monongahela_3	Fall_Neville_1	Fall_Neville_2	Fall_Neville_3	Fall_Sharpsburg_1	Fall_Sharpsburg_2	Fall_Sharpsburg_3	Fall_Sharpsburg_4	
+0.047	0.036	0.046	0.110	0.127	0.060	0.050	0.075	0.104	0.074	0.086	0.093	0.040	0.061	0.068	0.043	0.032	0.049	0.040	

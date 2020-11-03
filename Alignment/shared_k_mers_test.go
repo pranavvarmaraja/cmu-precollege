@@ -1,0 +1,46 @@
+package Alignment
+
+import (
+	"strconv"
+	"testing"
+)
+
+type sharedKMersTestpair struct {
+	str1        string
+	str2        string
+	k           int
+	sharedKmers int
+}
+
+var sharedKMersTests = []sharedKMersTestpair{
+	{"ATGCGGCTAGCTTAGCCTAGATCGATCGGCTAGCTAGCTAGCCGAGGCTCTCGATCGATCGCGCTAGG",
+		"ATGCGGCTGGCTTAGCCTAGTTCGATCGCGTTCGTAGCTATAGAGCTAGCTAGATCGATCGCGCTAGG", 3, 51},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"GGTACATCGATTCTAGATTCTATAGCGCGCTTCGATCGATTCGATCGATCGAAAAG", 1, 52},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT", 2, 55},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT", 50, 7},
+	{"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+		"TTGCGGAGCTAGGGATCCGATCGAATATCGATATAGCATCGGGAACACAGATCGAT", 10, 35},
+	{"AGCT",
+		"TCGA", 1, 4},
+	{"AATT",
+		"CCGG", 5, 0},
+	{"AGCT",
+		"TGAC", 2, 0}}
+
+func TestCountSharedKmers(t *testing.T) {
+	for _, pair := range sharedKMersTests {
+		v := CountSharedKmers(pair.str1, pair.str2, pair.k)
+		if v != pair.sharedKmers {
+			t.Error(
+				"For", pair.str1,
+				"and", pair.str2,
+				"with k-mers of length", pair.k,
+				"expected", strconv.Itoa(pair.sharedKmers),
+				"got", strconv.Itoa(v),
+			)
+		}
+	}
+}

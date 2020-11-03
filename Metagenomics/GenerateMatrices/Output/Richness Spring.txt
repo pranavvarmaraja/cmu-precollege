@@ -1,0 +1,2 @@
+Spring_Braddock_1	Spring_Braddock_2	Spring_Control_1	Spring_Monongahela_1	Spring_Monongahela_2	Spring_Neville_1	Spring_Sharpsburg_1	
+73	71	47	89	84	71	83	

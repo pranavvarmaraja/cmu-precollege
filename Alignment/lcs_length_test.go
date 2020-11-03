@@ -1,0 +1,42 @@
+package Alignment
+
+import("testing"
+	   "strconv")
+
+type lcsLengthTestpair struct {
+	str1 string
+	str2 string
+	lcsLength int
+}
+
+var lcsLengthTests = []lcsLengthTestpair{
+	{"ATGCGGCTAGCTTAGCCTAGATCGATCGGCTAGCTAGCTAGCCGAGGCTCTCGATCGATCGCGCTAGG",
+	 "ATGCGGCTGGCTTAGCCTAGTTCGATCGCGTTCGTAGCTATAGAGCTAGCTAGATCGATCGCGCTAGG",59},
+	 {"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+	  "GGTACATCGATTCTAGATTCTATAGCGCGCTTCGATCGATTCGATCGATCGAAAAG",37},
+	  {"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+	  "TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",56},
+	  {"TTGCGGAGCTAGGGATCCGATCGAATATCGATATTCGATCGGGAACACAGATCGAT",
+	  "TTGCGGAGCTAGGGATCCGATCGAATATCGATATAGCATCGGGAACACAGATCGAT",54},
+	  {"AGCT",
+	  "TCGA",1},
+	  {"AATT",
+	  "CCGG",0},
+	  {"AGCT",
+	  "TGAC",2},
+	  {"---ATCGATC--ATCGATT-GGACAT",
+	   "--ATGATGCATC---ATCGGTAG---GCTTAGCTTTTAG", 20}}
+
+func TestLCSLength(t *testing.T) {
+	for _, pair := range lcsLengthTests {
+		v := LCSLength(pair.str1, pair.str2)
+		if v != pair.lcsLength {
+			t.Error(
+				"For", pair.str1,
+				"and", pair.str2,
+				"expected", strconv.Itoa(pair.lcsLength),
+				"got", strconv.Itoa(v),
+			)
+		}
+	}
+}
